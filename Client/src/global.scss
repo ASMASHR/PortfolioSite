@@ -1,0 +1,24 @@
+$mainColor: #252934; //#97999b
+$SecondColor: #00b2a9;
+$Width: 1127px;
+@mixin mobile {
+  @media (max-width:#{$Width}) {
+    @content;
+  }
+}
+@keyframes leftIn {
+  0% {
+    transform: skewX(20deg) translateX(-1000px);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+@keyframes rightIn {
+  0% {
+    transform: skewX(20deg) translateX(+1000px);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}

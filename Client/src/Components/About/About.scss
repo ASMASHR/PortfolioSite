@@ -1,0 +1,201 @@
+@import "../../global.scss";
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .top {
+    margin-bottom: 3vw;
+    @include mobile {
+      margin-bottom: 2px;
+    }
+    h1 {
+      font-size: 30px;
+      color: #444649;
+      font-family: "raleway-bold";
+      animation: leftIn 1s ease-in 0.7s;
+      // position: absolute;
+      // left: 0;
+      // style={{transform:'translateX(20vw)'}}
+      // transition: all 1s ease-in;
+    }
+    .underL {
+      height: 5px;
+      width: 80px;
+      margin: 5px 2px 1px 10px;
+      background-color: grey;
+      animation: leftIn 1s ease-in 1s;
+    }
+  }
+  .aboutContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    @include mobile {
+      display: none;
+    }
+    .AboutCard {
+      height: 210px;
+      width: 246px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0 7px;
+      align-items: center;
+      text-align: center;
+      .iconContainer {
+        display: inline-block;
+        height: 80px;
+        position: relative;
+
+        width: 80px;
+        .hexagone {
+          background-color: $SecondColor;
+          display: inline-block;
+          height: 100%;
+          width: calc(100% * 0.57735);
+        }
+        .hexagone:before {
+          background-color: inherit;
+          content: "";
+          height: inherit;
+          position: absolute;
+          right: calc((100% / 2) - ((100% * 0.57735) / 2));
+          top: 0;
+          transform: rotateZ(60deg);
+          width: inherit;
+        }
+        .hexagone:after {
+          background-color: inherit;
+          content: "";
+          height: inherit;
+          position: absolute;
+          right: calc((100% / 2) - ((100% * 0.57735) / 2));
+          top: 0;
+          transform: rotateZ(-60deg);
+          width: inherit;
+        }
+        .cardIcon {
+          text-align: center;
+          color: #fff;
+          font-size: 34pt;
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 14px;
+          z-index: 1;
+          margin-left: 17px;
+        }
+      }
+      h2 {
+        color: grey;
+        margin: 15px 0 5px 0;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 25px;
+        color: gray;
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    width: 90%;
+    margin: 7px 5px 5px 40px;
+    justify-content: space-around;
+    @include mobile {
+      flex-direction: column;
+    }
+    .left {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      @include mobile {
+        width: 100%;
+        align-items: center;
+      }
+      h2 {
+        margin-bottom: 2vw;
+        text-align: center;
+        font-family: "Raleway";
+        color: #00a1a7;
+      }
+      li {
+        margin-bottom: 1vw;
+        line-height: 27px;
+        font-family: "Raleway", sans-serif;
+
+        .when {
+          color: $SecondColor;
+          text-decoration: underline;
+          font-style: italic;
+          font-weight: 600;
+        }
+        .what {
+          text-transform: uppercase;
+          color: #f50057;
+          font-weight: 800;
+          margin: 0px 5px;
+        }
+        .where {
+          color: #8d8080;
+          font-size: 14px;
+          font-style: oblique;
+        }
+      }
+
+      .linkContact {
+        text-align: center;
+        text-transform: none;
+        color: #009ada;
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      @include mobile {
+        align-items: center;
+      }
+      h2 {
+        margin-bottom: 2vw;
+        text-align: center;
+        font-family: "Raleway";
+        color: #00a1a7;
+      }
+      .barrecontainer {
+        background-color: #eee;
+        color: #666;
+        height: 26px;
+        width: 40vw;
+        margin: 0 0 12px 0;
+        // position: relative;
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+          margin: 0 0 4px 0;
+        }
+        .FillBare {
+          width: 85%;
+          background-color: $SecondColor;
+          .infoName {
+            // position: absolute;
+            // top: 0;
+            background-color: #0dc9bf;
+            color: #fff;
+            height: 100%;
+            width: 130px;
+            text-align: center;
+          }
+        }
+        span {
+        }
+      }
+    }
+  }
+}

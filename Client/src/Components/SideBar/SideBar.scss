@@ -1,0 +1,31 @@
+@import "../../global.scss";
+.SideBarContainer {
+  width: 76px;
+  height: 398px;
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+  position: fixed;
+  left: 0;
+  background-color: $SecondColor; //#04c2c9
+  margin: 15vw 2vw;
+  align-items: center;
+  justify-content: space-around;
+  @include mobile {
+    width: 45px;
+    margin: 15vw 0vw;
+  }
+  a {
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    .iconContainer {
+      padding: 5px;
+    }
+    .iconContainer:hover {
+      //   border: 1px solid #f50057;
+      padding: 5px;
+      color: #f50057;
+    }
+  }
+}

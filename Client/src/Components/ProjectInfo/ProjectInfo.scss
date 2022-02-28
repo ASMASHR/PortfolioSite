@@ -1,0 +1,147 @@
+@import "../../global.scss";
+.projectInfo {
+  width: 700px;
+  height: 85vh;
+  margin: 5vw 20vw;
+  position: fixed;
+  top: -900px;
+  z-index: 2;
+  transition: all 1s ease;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-sizing: border-box;
+
+  &.visible {
+    display: block;
+  }
+  &.active {
+    top: 0;
+    @include mobile {
+      top: 30px;
+      margin: 5vw 10vw;
+    }
+  }
+  .ProjectInfoContainer {
+    height: 98%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include mobile {
+    }
+
+    .imgContainer {
+      display: flex;
+      height: 70%;
+      flex-direction: column;
+      justify-content: space-around;
+      position: relative;
+      width: 700px;
+      @include mobile {
+      }
+      .button-close {
+        color: whitesmoke;
+        z-index: 5;
+        position: absolute;
+        font-size: 50px;
+        margin: 20px 0px 0px 650px;
+        cursor: pointer;
+      }
+      .slider {
+        height: 90%;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-out;
+        @include mobile {
+          justify-content: center;
+        }
+        .topImgContainer {
+          height: 100%;
+          width: 700px;
+          top: -5px;
+          display: flex;
+          justify-content: center;
+          @include mobile {
+          }
+          img {
+            // width: 700px;
+            height: 100%;
+          }
+        }
+      }
+      .buttom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12vw;
+        @include mobile {
+          // margin-top: 1vw;
+          width: 500px;
+        }
+        .arrow {
+          position: absolute;
+          height: 21px;
+          padding: 12px;
+          background-color: rgba(133, 130, 130, 0.397);
+          cursor: pointer;
+          margin: 10px;
+          &.Left {
+            left: -21px;
+            transform: rotate(90deg);
+          }
+          &.Right {
+            right: -18px;
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+    .infoContainer {
+      display: flex;
+      flex-direction: column;
+      .desc {
+        padding: 1vw;
+        height: 7vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        @include mobile {
+          height: 10vw;
+        }
+      }
+      .tools {
+        padding: 1vw;
+        height: 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        @include mobile {
+          height: 10vw;
+        }
+        span {
+          color: gray;
+          font-style: italic;
+        }
+      }
+      .ButtonSite {
+        background-color: #f50057;
+        border: none;
+        width: 11vw;
+        height: 4vw;
+        margin: 1vw;
+        padding: 5px;
+        color: wheat;
+        font-size: larger;
+        @include mobile {
+          width: 30vw;
+        }
+      }
+      .ButtonSite:hover {
+        background-color: white;
+        color: #f50057;
+      }
+    }
+  }
+}

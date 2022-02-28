@@ -1,0 +1,21 @@
+@import "../../global.scss";
+
+.PortfolioList {
+  // font-size: 14px;
+  // margin-right: 50px;
+  // padding: 7px;
+  // border-radius: 10px;
+  font-size: 14pt;
+  margin: 0 25px;
+  padding: 5px 40px;
+  color: #444649;
+  font-family: "raleway-bold";
+  @include mobile {
+    margin-right: 20px;
+  }
+  cursor: pointer;
+  &.active {
+    color: white;
+    background-color: #f50057;
+  }
+}
